@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para o Amor da Minha Vida 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="designer.css">
+</head>
+<body>
+
+  <!-- Música de fundo -->
+  <!-- Botão para tocar música -->
+  <div class="music-btn-container">
+    <button id="playMusicBtn" class="music-btn">💖 Tocar Nossa Música</button>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="sons/photograph.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <!-- Fundo com animação -->
+  <div class="animated-bg"></div>
+
+  <div class="container">
+    <header>
+      <h1>💘 Feliz Dia dos Namorados 💘</h1>
+    </header>
+
+    <section class="message">
+      <p>
+        Meu amor, você é minha razão de sorrir todos os dias. <br>
+        Obrigado por existir, por me amar, e por me fazer tão feliz. <br>
+        Que nosso amor continue florescendo para sempre. 🌹❤️
+      </p>
+    </section>
+
+    <!-- Carrossel de fotos -->
+    <section class="gallery">
+      <div class="carousel">
+        <img src="fotos/WhatsApp Image 2025-06-06 at 18.03.21.jpeg" alt="Foto 1">
+        <img src="fotos/WhatsApp Image 2025-06-06 at 18.03.22 (1).jpeg" alt="Foto 2">
+        <img src="fotos/WhatsApp Image 2025-06-06 at 18.03.22.jpeg" alt="Foto 3">
+        <img src="fotos/WhatsApp Image 2025-06-06 at 18.03.23 (1).jpeg" alt="Foto 4">
+        <img src="fotos/WhatsApp Image 2025-06-06 at 18.03.23.jpeg" alt="Foto 5">
+        <img src="fotos/WhatsApp Image 2025-06-06 at 18.03.24 (1).jpeg" alt="Foto 6">
+        <img src="fotos/WhatsApp Image 2025-06-06 at 18.03.24.jpeg" alt="Foto 7">
+      </div>
+    </section>
+
+    <!-- Carta surpresa -->
+    <section class="surprise">
+      <div class="envelope" onclick="abrirCarta()">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="letter">
+          <p>Clique para abrir sua carta 💌</p>
+        </div>
+      </div>
+      <div class="hidden-message" id="mensagemSegredo">
+        Você é o meu mundo, minha vida, meu amor eterno. 💖<br>
+        Mal posso esperar para continuar escrevendo nossa linda história juntos. 💍✨
+      </div>
+    </section>
+
+    <div class="tempo-juntos">
+        💞 Eu te amo há <span id="contadorAmor"></span>
+      </div>
+      
+    <footer>
+      Criado com 💘 por alguém que te ama além das palavras.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("playMusicBtn").addEventListener("click", () => {
+      const bgMusic = document.getElementById("bgMusic");
+      bgMusic.play()
+        .then(() => {
+          document.getElementById("playMusicBtn").style.display = "none";
+        })
+        .catch((err) => {
+          console.log("Erro ao tocar música:", err);
+        });
+    });
+  </script>
+
+  <script src="funcao.js"></script>
+</body>
+</html>
